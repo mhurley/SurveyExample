@@ -12,8 +12,18 @@ class ViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
 
-  var survey: Survey = Survey.exampleSurvey
-
+  var survey: Survey = Survey(questions: [
+    SurveyQuestion(question: "question 1", answers: ["answer 1",
+                                                     "answer 2"]),
+    SurveyQuestion(question: "question 2", answers: ["answer 2.1",
+                                                     "answer 2.2",
+                                                     "answer 2.3"]),
+    SurveyQuestion(question: "question 3", answers: ["answer 3.1",
+                                                     "answer 3.2",
+                                                     "answer 3.3",
+                                                     "answer 3.4"]),
+    ]
+  )
   override func viewDidLoad() {
     super.viewDidLoad()
 
